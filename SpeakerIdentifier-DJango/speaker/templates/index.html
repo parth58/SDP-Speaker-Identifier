@@ -1,0 +1,10 @@
+{% extends 'base.html' %} 
+{% block content %} 
+  <h1 class="text-center mb-3">Speaker Identifier</h1>
+  <form action="/speaker/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+  
+{% endblock %}
